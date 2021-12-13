@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.android.keyencryption.database.DataTable" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/cardViewBorder"
+        app:strokeWidth="0.5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/tvGeneratedKey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:minLines="1"
+                android:text="@{item.generatedKey}"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tvTextToEncrypt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Michael - MK3728" />
+
+
+            <TextView
+                android:id="@+id/tvTextToEncrypt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:maxLines="2"
+                android:text="@{item.textToEncrypt}"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/tvGeneratedKey"
+                app:layout_constraintTop_toBottomOf="@+id/tvGeneratedKey"
+                tools:text="Ehsan Ullah" />
+
+            <TextView
+                android:id="@+id/tvEncrypt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:maxLines="2"
+                android:text="Encrypted: "
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/tvTextToEncrypt"
+                app:layout_constraintTop_toBottomOf="@+id/tvTextToEncrypt" />
+
+            <TextView
+                android:id="@+id/tvEncryptedText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_marginStart="@dimen/_8sdp"
+                tools:text="asdsd12213/sdasd "
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toTopOf="@id/tvEncrypt"
+                app:layout_constraintStart_toEndOf="@id/tvEncrypt"
+                app:layout_constraintBottom_toBottomOf="@id/tvEncrypt"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tvDecrypt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:maxLines="2"
+                android:text="Decrypted: "
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/tvEncrypt"
+                app:layout_constraintTop_toBottomOf="@+id/tvEncrypt" />
+
+            <TextView
+                android:id="@+id/tvDecryptedText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_marginStart="@dimen/_8sdp"
+                tools:text="asdsd12213/sdasd "
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toTopOf="@id/tvDecrypt"
+                app:layout_constraintStart_toEndOf="@id/tvDecrypt"
+                app:layout_constraintBottom_toBottomOf="@id/tvDecrypt"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/removeBtn"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/remove_btn_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:text="Remove"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvDecrypt"
+                app:layout_constraintTop_toBottomOf="@id/tvDecrypt" />
+
+            <TextView
+                android:id="@+id/encryptTextBtn"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/blue_transparent_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:text="Encrypt"
+                android:textAllCaps="false"
+                android:textColor="@color/facebook"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDecrypt" />
+
+            <TextView
+                android:id="@+id/decryptTextBtn"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/blue_transparent_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:visibility="gone"
+                android:text="Decrypt"
+                android:textAllCaps="false"
+                android:textColor="@color/facebook"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/encryptTextBtn"
+                app:layout_constraintTop_toBottomOf="@id/tvDecrypt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

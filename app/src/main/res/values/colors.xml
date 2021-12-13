@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#47b54a</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#47b54a</color>
+    <color name="statusBarTextColorDark">#787878</color>
+
+    <color name="primaryTextColor">#1c2f41</color>
+    <color name="secondaryTextColor">#808fa5</color>
+
+    <color name="textColorGrey">#555555</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="editText">#F3F3F4</color>
+    <color name="windowBGGrey">#F8F8F8</color>
+    <color name="grey">#e4efec</color>
+    <color name="tabBackground">#F5F6FA</color>
+    <color name="dot_indicator_color">#9b9b9b</color>
+    <color name="divider">#E4EFED</color>
+    <color name="createAnAccount">#4060AD</color>
+    <color name="socialButtonsBG">#F5F8FD</color>
+    <color name="google">#ED4637</color>
+    <color name="facebook">#2173B9</color>
+    <color name="hintColor">#838484</color>
+    <color name="recViewBG">#EBF0F4</color>
+    <color name="cardViewBorder">#9198A8</color>
+    <color name="red">#FF0000</color>
+</resources>
